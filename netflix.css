@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: color 0.3s, transform 0.3s;
+    color: red;
+    transform: scale(1.08);
+}
+
+body{
+    background-color: black;
+}
+
+.mainNetflixContainer{
+    /* border: 2px solid red; */
+    /* padding: 1rem 2rem; */
+    position: relative;
+}
+
+.backgroundContainer{
+     background-image: url(banner.jpeg);
+     filter: blur(16px);
+     height: 100vh;
+     position: relative;
+}
+
+.pinkoverlay{
+    background-color: rgb(104,3,20,0,404);
+    height: 100%;
+    width: 100%;
+}
+
+.contentContainer{
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    padding: 0rem 2rem;
+}
+
+nav{
+    /* border: 2px solid green; */
+    height: 12vh;
+    position: fixed;
+    z-index: 1000;
+}
+
+.upperNavBarSection{
+    /* border: 2px solid blue;  */
+    display: flex;
+    height: 50%;
+
+}
+
+.upperNavBarLeftSection{
+    /* border: 2px solid red; */
+    width: 50%;
+}
+
+.netflixLogo{
+    width: 30%;
+
+}
+
+.upperNavBarRightSection{
+    /* border: 2px solid yellow; */
+    width: 50%;
+}
+
+.navBarButtonContainer{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.languageButton{
+    display: flex;
+    padding: .2rem .8rem;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.languageButton select {
+    margin-left: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.languageButton select option{
+    background-color: white;
+    color: black;
+
+}
+
+.signinButton{
+    background-color: rgb(246, 43, 43);
+    color: white;
+    padding: .2rem .8rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.lowerNavBarSection{
+    /* border: 2px solid red; */
+    height: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.menuList{
+    /* border:2px solid green ;  */
+    width: 50%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.564);
+    box-shadow: 2px 3px 14px black;
+    align-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    height: 7vh;
+}
+
+    
+.sectionContainer{
+    margin-top: 20vh;
+}
+.bannerSection{
+    /* border: 2px solid green; */
+    height: 80vh;
+    background-image: url(banner.jpeg);
+    border-radius: 20px;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent,rgba(0,0,0,.7));
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.bannerContainer{
+    /* border: 2px solid red; */
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerContainer h2{
+    font-size: 4rem;
+    width: 50%;
+    text-align: center;
+}
+
+.bannerContainer h4{
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.bannerContainer p{
+    font-size: 1rem;
+    margin: 20px;
+}
+
+.inputContainer{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.emailInputBox{
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255,0.3);
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.emailInputBox::placeholder{
+    color: white;
+}
+
+.getStarted{
+    width: 30%;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.carousalSection,
+.planSection,
+.reasonToJoinSection,
+.faqSection {
+    /* border:2px solid red ; */
+    color: white;
+}
+
+.carousalSection h2,
+.planSection h2,
+.reasonToJoin h2,
+.faqSection h2 {
+    margin-left: 4rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.carousalCardContainer,
+.plansContainer,
+.reasonsContainer,
+.faqCardContainer{
+     /* border:2px solid green ; */
+     height: 100%;
+     width: 80%;
+     display: flex;
+     justify-content: space-evenly;
+     margin: 2rem auto;
+     gap: 2rem;
+}
+
+.carousalCard{
+     width:20%;
+     /* border:2px solid yellow ; */
+     height: 35vh;
+     cursor: pointer;
+     position: relative;
+     border-radius: 20px;
+}
+
+.carousalNumberContainer{
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: 2;
+    
+}
+
+.carousalNumberContainer span{
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgb(28, 26, 26);
+  -webkit-text-stroke: 0.15rem rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+
+}
+
+.carousalImageContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.carousalImageContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+} 
+
+.planCard, .reasonCard{
+    border: 1px solid white;
+    height: 35vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem;
+    background: linear-gradient(149deg, #1C4072 6.96%, #172B47 40.17%, #0C1F5F 73.39%);
+}
+
+.planCard h2{
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.planCardUpperContent h4{
+    color: rgb(255, 220, 174);
+    opacity: 50%;
+}
+
+.reasonCard{
+    background: rgb(30, 30, 30);
+    border: none;
+    height: 30vh;
+}
+
+.reasonCard h2{
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.reasonCard p{
+    font-size: 1rem;
+}
+
+.faqCard{
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.faqQuestion,.faqAnswer{
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+}
+
+.faqQuestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqQuestion span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.faqAnswer {
+  display: none;
+}
+
+.faqCard:hover{
+    cursor: pointer;
+}
+
+.faqCard:hover  .faqAnswer {
+  display: block;
+  cursor: pointer;
+}
+
+.getStartedsection{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.getStartedsection p{
+    margin-bottom: 1remb ;
+}
